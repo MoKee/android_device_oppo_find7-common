@@ -52,5 +52,10 @@ TARGET_SYSTEM_PROP += device/oppo/find7-common/system.prop
 # Recovery
 TARGET_RECOVERY_FSTAB := device/oppo/find7-common/rootdir/etc/fstab.recovery
 
+# TWRP
+ifeq ($(WITH_TWRP),true)
+TARGET_RECOVERY_DEVICE_DIRS += device/oppo/find7-common/twrp
+endif
+
 # Inherit from the proprietary version
 include vendor/oppo/find7-common/BoardConfigVendor.mk
